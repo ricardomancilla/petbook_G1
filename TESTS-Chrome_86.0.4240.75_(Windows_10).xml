@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 86.0.4240.75 (Windows 10)" package="" timestamp="2020-10-22T01:32:09" id="0" hostname="DESKTOP-P20I0IE" tests="10" errors="0" failures="0" time="0.002">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36"/>
+  </properties>
+  <testcase name="AppComponent should create the app" time="0" classname="Chrome_86_0_4240_75_(Windows_10).AppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AppComponent should render title" time="0" classname="Chrome_86_0_4240_75_(Windows_10).AppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AppComponent should have as title 'pet-book'" time="0" classname="Chrome_86_0_4240_75_(Windows_10).AppComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="FilterimagesPipe create an instance" time="0" classname="Chrome_86_0_4240_75_(Windows_10).FilterimagesPipe">
+    <skipped/>
+  </testcase>
+  <testcase name="ImageDetailsComponent should create" time="0" classname="Chrome_86_0_4240_75_(Windows_10).ImageDetailsComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ImageGalleryComponent should create" time="0" classname="Chrome_86_0_4240_75_(Windows_10).ImageGalleryComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ImageService #getImage should return the image 1" time="0.002" classname="Chrome_86_0_4240_75_(Windows_10).ImageService #getImage"/>
+  <testcase name="ImageService #getImage should return undefined when it is call with 20" time="0" classname="Chrome_86_0_4240_75_(Windows_10).ImageService #getImage"/>
+  <testcase name="ImageService #getImages should assign 5 images to #allImages variable " time="0" classname="Chrome_86_0_4240_75_(Windows_10).ImageService #getImages"/>
+  <testcase name="ImageService service should be created" time="0" classname="Chrome_86_0_4240_75_(Windows_10).ImageService"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
