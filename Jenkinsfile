@@ -20,24 +20,24 @@ pipeline {
         }
       }
     }
-    // stage('static analysis') {
-    //   steps {
-    //     nodejs('node') {
-    //       script {
-    //         def scannerHome = tool 'sonar-scanner';
-    //         withSonarQubeEnv('sonar-cloud') {
-    //           echo "branch_name: $BRANCH_NAME"
-    //           sh "${scannerHome}/bin/sonar-scanner"
-    //         }
-    //         def qualitygate = waitForQualityGate()
-    //         if (qualitygate.status != "OK") {
-    //           error "Pipeline aborted due to quality gate coverage failure: ${qualitygate.status}"
-    //         }
-    //       }
+    stage('static analysis') {
+      steps {
+        nodejs('node') {
+          script {
+            def scannerHome = tool 'sonar-scanner';
+            withSonarQubeEnv('sonar-cloud-G1') {
+              echo "branch_name: $BRANCH_NAME"
+              sh "${scannerHome}/bin/sonar-scanner -Dsonar.branch.name=${BRANCH_NAME}"
+            }
+            def qualitygate = waitForQualityGate()
+            if (qualitygate.status != "OK") {
+              error "Pipeline aborted due to quality gate coverage failure: ${qualitygate.status}"
+            }
+          }
 
-    //     }
-    //   }
-    // }
+        }
+      }
+    }
     // stage('deploy') {
     //   steps {
     //     withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
