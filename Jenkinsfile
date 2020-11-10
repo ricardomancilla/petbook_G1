@@ -27,7 +27,7 @@ pipeline {
             def scannerHome = tool 'sonar-scanner';
             withSonarQubeEnv('sonar-cloud-G1') {
               echo "branch_name: $BRANCH_NAME"
-              sh "${scannerHome}/bin/sonar-scanner -Dsonar.branch.name=${BRANCH_NAME}"
+              sh "${scannerHome}/bin/sonar-scanner"
             }
             def qualitygate = waitForQualityGate()
             if (qualitygate.status != "OK") {
