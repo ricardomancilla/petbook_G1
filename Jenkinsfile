@@ -38,13 +38,13 @@ pipeline {
         }
       }
     }
-    // stage('deploy') {
-    //   steps {
-    //     withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
-    //       s3Upload(bucket: 'udem20202-profe', file: 'dist/pet-book')
-    //     }
-    //   }
-    // }
+    stage('deploy') {
+      steps {
+        withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
+          s3Upload(bucket: 'udem20202-equipo1', file: 'dist/pet-book')
+        }
+      }
+    }
     stage('e2e') {
       steps {
         dir(path: 'e2e') {
