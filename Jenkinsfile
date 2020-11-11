@@ -42,7 +42,6 @@ pipeline {
       steps {
         withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
           s3Upload(bucket: 'udem20202-equipo1', file: 'dist/pet-book')
-          sh 'echo aplicación desplegada en s3'
         }
       }
     }
